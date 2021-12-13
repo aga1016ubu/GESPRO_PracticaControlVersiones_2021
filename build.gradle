@@ -23,6 +23,7 @@ buildscript {
     }
     dependencies {
         // Android Plugin for Gradle : https://developer.android.com/studio/releases/gradle-plugin.html#updating-plugin
+        // Android Plugin for Gradle : https://developer.android.com/studio/releases/gradle-plugin.html#updating-plugin
         classpath 'com.android.tools.build:gradle:2.3.3'
         // JaCoCo Android : https://github.com/arturdm/jacoco-android-gradle-plugin
         classpath 'com.dicedmelon.gradle:jacoco-android:0.1.2'
