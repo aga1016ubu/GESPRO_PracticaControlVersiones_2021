@@ -6,4 +6,4 @@
 -keep @io.realm.annotations.RealmModule class *
 -keep class io.realm.** { *; }
 -dontwarn javax.**
--dontwarn io.realm.*
+-dontwarn io.realm.**
