@@ -20,12 +20,15 @@ apply plugin: 'com.android.application'
 apply plugin: 'jacoco-android'
 apply plugin: 'realm-android'
 apply plugin: 'io.fabric'
+<<<<<<< HEAD
+=======
 
 // App version
 ext.versionMajor = 1 // API Changes, adding big new feature, redesign the App
 ext.versionMinor = 2 // New features in a backwards-compatible manner
 ext.versionPatch = 0 // Backwards-compatible bug fixes
 ext.versionClassifier = null // Pre-releases (alpha, beta, rc, SNAPSHOT...)
+>>>>>>> master
 
 // Get signing config
 def keystorePropertiesFile = rootProject.file("secrets/keystore.properties")
@@ -41,8 +44,13 @@ android {
         applicationId "com.davidmiguel.gobees"
         minSdkVersion 19
         targetSdkVersion 26
+<<<<<<< HEAD
+        versionCode 11
+        versionName "v1.1"
+=======
         versionCode generateVersionCode()
         versionName generateVersionName()
+>>>>>>> master
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         manifestPlaceholders = [
                 crashlyticsKey: keystoreProperties['CrashlyticsKey']
@@ -97,12 +105,21 @@ android {
             applicationIdSuffix = ".mock"
             resValue('string', 'app_name', getAppName() + '-mock')
             ext.enableCrashlytics = false
+<<<<<<< HEAD
         }
         // Dev: dev environment
         dev {
             applicationIdSuffix = ".dev"
             resValue('string', 'app_name', getAppName() + '-dev')
         }
+=======
+        }
+        // Dev: dev environment
+        dev {
+            applicationIdSuffix = ".dev"
+            resValue('string', 'app_name', getAppName() + '-dev')
+        }
+>>>>>>> master
         // Prod: production environment
         prod {
             resValue('string', 'app_name', getAppName())
@@ -266,6 +283,8 @@ sonarqube {
 }
 
 /**
+<<<<<<< HEAD
+=======
  * Returns the number of the current build in Travis.
  */
 private static Integer getBuildNumber() {
@@ -298,6 +317,7 @@ private String generateVersionName() {
 }
 
 /**
+>>>>>>> master
  * Returns git commit long hash.
  */
 private String getCommitHash() {
@@ -318,4 +338,8 @@ private static String getAppName() {
     return "GoBees"
 }
 
+<<<<<<< HEAD
 apply plugin: 'com.google.gms.google-services'
+=======
+apply plugin: 'com.google.gms.google-services'
+>>>>>>> master
